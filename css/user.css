@@ -1,0 +1,290 @@
+/* Root Variables */
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, 
+      "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
+      "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito", sans-serif;
+  --nav-font: "Inter", sans-serif;
+
+  /* Color variables */
+  --default-color: #000;
+  --background-color: #f3f9ff;
+  --accent-color: #005c00;
+  --heading-color: #000;
+}
+
+/* Smooth Scrolling */
+:root {
+  scroll-behavior: smooth;
+}
+
+/* General body styling */
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+
+/* Main Content */
+.main {
+  margin-left: 260px; /* Aligns content beside sidebar */
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {  
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+h2 {
+  text-align: center;
+  color: #000;
+  font-style: bold;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 80%;
+  margin: 5px 60px 5px auto; /* Adjusts the table to the right */
+  border-collapse: separate;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #005c29;
+  color: white;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e8f5e9;
+}
+
+td b {
+  color: #005c29;
+  font-weight: bold;
+}
+
+/* Form Styling */
+form {
+  width: 500px;
+  border: 2px solid #005c29;
+  padding: 45px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+input {
+  display: block;
+  border: 2px solid #000;
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+label {
+  color: #000;
+  font-size: 16px;
+  padding: 10px 0;
+  display: block;
+}
+
+/* Button Styling */
+button {
+  background: #005c29;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  float: right;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Error & Success Messages */
+.error, .success {
+  width: 95%;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.error {
+  background: #fff;
+  color: #A94442;
+}
+
+.success {
+  background: #fff;
+  color: #40754C;
+}
+
+/* Link Under Form */
+.ca {
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.ca:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Sidebar Navigation */
+.sidenav {
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #005c29, #003d1a); /* Gradient background */
+  overflow-x: hidden;
+  padding-top: 50px;
+  font-family: var(--nav-font);
+  border-right: 2px solid #005c29;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  transition: width 0.3s ease-in-out; /* Smooth width transition */
+}
+
+.sidenav a {
+  padding: 15px 35px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.sidenav a:last-child {
+  border-bottom: none;
+}
+
+.sidenav a:hover {
+  color: #fff;
+  background-color: rgba(0, 92, 0, 0.8); /* Slightly darken on hover */
+  padding-left: 45px; /* Add padding effect */
+}
+
+/* Icon Styling */
+.sidenav a i {
+  margin-right: 15px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.sidenav a:hover i {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* Active Link Styling */
+.sidenav a.active {
+  background-color: #004d00; /* Darker green for active state */
+  font-weight: bold;
+}
+
+.sidenav .sidenav-header {
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 35px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #003d1a; /* Darker background for header */
+  border-bottom: 2px solid #005c29;
+}
+
+/* Main Content */
+.main {
+  margin-left: 260px; /* Aligns content beside sidebar */
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Sidebar for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .sidenav a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 14px;
+  }
+}
+
+textarea {
+  display: block;
+  border: 2px solid #000;
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  resize: vertical; /* Allow vertical resizing */
+  font-family: var(--default-font);
+  font-size: 16px;
+  color: var(--default-color);
+}
+
+textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
